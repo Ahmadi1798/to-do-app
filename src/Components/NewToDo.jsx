@@ -30,7 +30,7 @@ const NewToDo = (props) => {
       <input
         onChange={changeHandler}
         className="w-full bg-varyLightGray text-veryDarkGrayishBlue1 capitalize dark:text-varyLightGrayishBlue
-       focus:outline-none placeholder:text-veryLightGray placeholder:text-sm pl-2 dark:bg-veryDarkDesaturatedBlue"
+       focus:outline-none placeholder:text-veryLightGray placeholder:text-xs md:placeholder:text-sm pl-2 dark:bg-veryDarkDesaturatedBlue"
         placeholder="Create a new todo..."
         type="text"
         value={newToDo.input}

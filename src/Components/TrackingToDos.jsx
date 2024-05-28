@@ -23,7 +23,7 @@ const TrackingToDos = (props) => {
       <div className="hidden md:flex md:items-center md:justify-between md:space-x-4">
         <div className="p-2">
           <button
-            className={`text-[1rem] ${
+            className={`text-xs md:text-[1rem] ${
               !isClicked ? "text-brightBlue" : "text-darkGrayishBlue"
             } border-none pr-1 active:text-veryDarkDesaturatedBlue font-bold`}
             onClick={clickHandler}
@@ -33,7 +33,7 @@ const TrackingToDos = (props) => {
         </div>
         <div className="p-2">
           <button
-            className="text-[1rem] text-darkGrayishBlue  border-none pr-1 active:text-veryDarkDesaturatedBlue font-bold"
+            className="text-xs md:text-[1rem] text-darkGrayishBlue  border-none pr-1 active:text-veryDarkDesaturatedBlue font-bold"
             onClick={showCompletedTasks}
           >
             Completed
