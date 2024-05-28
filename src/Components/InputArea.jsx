@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import cross from "../images/icon-cross.svg";
 import tick from "../images/icon-check.svg";
-import Scrollbars from "react-custom-scrollbars-2";
 
 const InputArea = (props) => {
   const [isDone, setIsDone] = useState(false);
@@ -41,7 +40,7 @@ const InputArea = (props) => {
           )}
         </div>
         <p
-          className="text-md text-veryDarkDesaturatedBlue dark:text-varyLightGrayishBlue"
+          className=" text-sm md:text-md text-veryDarkDesaturatedBlue dark:text-varyLightGrayishBlue"
           style={{
             textDecoration: isDone && "line-through",
             color: isDone && "hsl(233, 11%, 84%)",
