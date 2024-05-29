@@ -54,7 +54,8 @@ const Main = (props) => {
       <div className="flex flex-col">
         <Heading onChangeBgImage={transferToMain} />
         <NewToDo onAdd={onAddNewToDo} />
-        <div className="scrollbar md:max-h-96 max-h-72 w-full overflow-y-scroll my-3 px-4 ml-2 ">
+
+        <div className=" scrollbar md:max-h-96 max-h-72 overflow-y-scroll my-3 ml-4">
           {isVisible
             ? completedToDos.map((todo, index) => {
                 return (
@@ -79,6 +80,7 @@ const Main = (props) => {
                 );
               })}
         </div>
+
         {allTodos.length !== 0 && (
           <TrackingToDos
             items={allTodos.length - completedToDos.length}

@@ -16,7 +16,7 @@ const InputArea = (props) => {
     props.onDelete(props.id);
   };
   return (
-    <div className="inputArea-container ">
+    <div className="inputArea-container">
       <div
         onClick={clickHandler}
         className=" flex flex-row items-center space-x-4 p-2"
