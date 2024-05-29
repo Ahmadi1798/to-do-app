@@ -22,7 +22,7 @@ const Heading = (props) => {
       <div className="cursor-pointer" onClick={changeTheme}>
         <img
           src={isLight ? moon : sun}
-          className="w-6 h-6 md:w-10 md:h-10"
+          className="w-6 h-6 md:w-8 md:h-8"
           alt=""
         />
       </div>

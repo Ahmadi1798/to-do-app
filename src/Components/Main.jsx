@@ -4,7 +4,6 @@ import InputArea from "./InputArea";
 import NewToDo from "./NewToDo";
 import TrackingToDos from "./TrackingToDos";
 import Footer from "./Footer";
-import Scrollbars from "react-custom-scrollbars-2";
 
 const Main = (props) => {
   const [allTodos, setToDos] = useState([]);
@@ -55,7 +54,7 @@ const Main = (props) => {
       <div className="flex flex-col">
         <Heading onChangeBgImage={transferToMain} />
         <NewToDo onAdd={onAddNewToDo} />
-        <div className="scrollbar max-h-96 w-full overflow-y-scroll my-4 px-2 mx-2">
+        <div className="scrollbar md:max-h-96 max-h-64 w-full overflow-y-scroll my-3 px-2 ml-2 ">
           {isVisible
             ? completedToDos.map((todo, index) => {
                 return (
