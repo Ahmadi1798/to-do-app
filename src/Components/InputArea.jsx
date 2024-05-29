@@ -40,7 +40,7 @@ const InputArea = (props) => {
           )}
         </div>
         <p
-          className=" text-sm capitalize md:text-md text-veryDarkDesaturatedBlue dark:text-varyLightGrayishBlue"
+          className=" text-xs capitalize md:text-md text-veryDarkDesaturatedBlue dark:text-varyLightGrayishBlue"
           style={{
             textDecoration: isDone && "line-through",
             color: isDone && "hsl(233, 11%, 84%)",
@@ -50,7 +50,7 @@ const InputArea = (props) => {
         </p>
       </div>
       <button
-        className="p-3  duration-200 hover:scale-125 hover:rotate-90"
+        className="p-1  duration-200 hover:scale-125 hover:rotate-90"
         onClick={deleteToDo}
       >
         <img src={cross} alt="" />
