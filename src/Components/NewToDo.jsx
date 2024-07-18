@@ -17,7 +17,8 @@ const NewToDo = (props) => {
     });
   };
 
-  const clickHandler = () => {
+  const clickHandler = (e) => {
+    e.preventDefault();
     props.onAdd(newToDo);
     setNewToDo(() => {
       return {
@@ -26,7 +27,7 @@ const NewToDo = (props) => {
     });
   };
   return (
-    <div className="newtodo-container">
+    <form onSubmit={clickHandler} className="newtodo-container">
       <input
         onChange={changeHandler}
         className="w-full bg-varyLightGray text-veryDarkGrayishBlue1 capitalize dark:text-varyLightGrayishBlue
@@ -34,13 +35,14 @@ const NewToDo = (props) => {
         placeholder="Create a new todo..."
         type="text"
         value={newToDo.input}
+        required
       />
       <Zoom in="true">
-        <Fab onClick={clickHandler} size="small" color="secondary">
+        <Fab type="submit" size="small" color="secondary">
           <Add />
         </Fab>
       </Zoom>
-    </div>
+    </form>
   );
 };
 

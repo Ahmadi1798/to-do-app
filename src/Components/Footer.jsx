@@ -29,7 +29,7 @@ const Footer = (props) => {
 
         <div className="p-2">
           <button
-            className="text-[1rem] text-darkGrayishBlue border-none pr-1 active:text-veryDarkDesaturatedBlue font-bold"
+            className="text-[1rem] active:text-brightBlue text-darkGrayishBlue border-none pr-1  font-bold"
             onClick={showCompletedTasks}
           >
             Completed

@@ -8,12 +8,14 @@ import Footer from "./Footer";
 const Main = (props) => {
   const [allTodos, setToDos] = useState([]);
   const [completedToDos, setCompletedTodo] = useState([]);
+  const [cross, setCross] = useState(true);
 
   const [isVisible, setIsVisible] = useState(false);
 
   const showCompleted = (showCompleted) => {
     setIsVisible(!showCompleted);
-    console.log(isVisible);
+    setCross(!cross);
+    console.log(cross);
   };
 
   const onAddNewToDo = (newToDo) => {
@@ -25,7 +27,6 @@ const Main = (props) => {
     setCompletedTodo((preValue) => {
       return [...preValue, newCompleted];
     });
-    console.log(completedToDos);
   };
 
   const deletToDo = (id) => {
@@ -39,6 +40,14 @@ const Main = (props) => {
         return index !== id;
       });
     });
+  };
+  const editToDoById = (id, Editedtodo) => {
+    const editedToDo = allTodos.map((todo, index) => {
+      if (id === index) return { ...todo, input: Editedtodo };
+      return todo;
+    });
+    setToDos(editedToDo);
+    console.log("Edit todo with id " + id + " edited to", Editedtodo);
   };
   const deleteCompleted = () => {
     setToDos([]);
@@ -65,6 +74,7 @@ const Main = (props) => {
                     todo={todo}
                     onDelete={deletToDo}
                     onAddCompleted={addCompleted}
+                    cross={cross}
                   />
                 );
               })
@@ -76,6 +86,8 @@ const Main = (props) => {
                     todo={todo.input}
                     onDelete={deletToDo}
                     onAddCompleted={addCompleted}
+                    cross={cross}
+                    onEdit={editToDoById}
                   />
                 );
               })}
